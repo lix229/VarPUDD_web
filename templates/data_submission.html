@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en" >
+<head>
+  {% load static %}
+  <meta charset="UTF-8">
+  <title>VarPPUD</title>
+  <link rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.6.3/css/font-awesome.min.css'>
+  <link rel="stylesheet" href="{% static 'style.css' %}">
+</head>
+<body>
+    <canvas class="background"></canvas>
+    <div id="wrap">
+      <nav class="navbar navbar-fixed-top" role="navigation">
+        <div class="container">
+          <div class="navbar-header">
+            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar-collapse">
+              <span class="glyphicon glyphicon-menu-hamburger" aria-hidden="false"></span>
+              <span class="sr-only">Toggle navigation</span>
+              <span class="icon-bar"></span>
+              <span class="icon-bar"></span>
+              <span class="icon-bar"></span>
+            </button>
+            
+            <a class="navbar-brand" href="#">VarPPUD</a>
+          </div>
+          
+          <div class="collapse navbar-collapse" id="navbar-collapse">
+            <ul class="nav navbar-nav navbar-right">
+              <li><a href="https://github.com/Rayin-saber/VarPPUD" target="_blank">Documentation</a></li>
+              <li><a href="#" onclick="openUsageModal()">Usage</a></li>
+              <li><a href="#" onclick="openQuestionModal()">About</a></li>
+            </ul>
+          </div>
+        </div>
+      </nav>
+
+      <div id="usageModal" class="modal">
+        <div class="modal-content">
+          <span class="close" onclick="closeModal()">&times;</span>
+          <p>#TODO USAGE TO BE UPDATED</p>
+        </div>
+      </div>
+
+      <div id="questionModal" class="modal">
+        <div class="modal-content">
+          <span class="close" onclick="closeModal()">&times;</span>
+          <p>#TODO UPDATE ABOUT</p>
+        </div>
+      </div>
+      
+      <div class="resultPanel">
+          Inputs read are {{name_field}}
+          <div class="actionContainer" id="resultActionContainer">
+            <button class="actionButton" onclick="window.location.href = 'http://127.0.0.1:8000/'"><i class="fa fa-refresh" aria-hidden="true"></i> </button>
+            <button class="actionButton" onclick="save()"> <i class="fa fa-download"></i></button>
+          </div>
+      </div>
+
+    </div>    
+</body>
+  <!-- partial -->
+  <script src='https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js'></script>
+  <script src='https://isotope.metafizzy.co/jquery.isotope.min.js'></script>
+  <script src="{% static 'script.js' %}"></script>
+  <script src="{% static 'particles.min.js' %}"></script>
+  </body>
+</html>
+
+
+

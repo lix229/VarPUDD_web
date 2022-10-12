@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en" >
+<head>
+  {% load static %}
+  <meta charset="UTF-8">
+  <title>VarPPUD</title>
+  <link rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.6.3/css/font-awesome.min.css'>
+  <link rel="stylesheet" href="{% static 'style.css' %}">
+</head>
+<body>
+
+  <body>
+    <canvas class="background"></canvas>
+    <div id="wrap">
+      <nav class="navbar navbar-fixed-top" role="navigation">
+        <div class="container">
+          <div class="navbar-header">
+            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar-collapse">
+              <span class="glyphicon glyphicon-menu-hamburger" aria-hidden="false"></span>
+              <span class="sr-only">Toggle navigation</span>
+              <span class="icon-bar"></span>
+              <span class="icon-bar"></span>
+              <span class="icon-bar"></span>
+            </button>
+            
+            <!-- <a class="navbar-brand" href="#">VarPPUD</a> -->
+          </div>
+          
+          <div class="collapse navbar-collapse" id="navbar-collapse">
+            <ul class="nav navbar-nav navbar-right">
+              <li><a href="https://github.com/Rayin-saber/VarPPUD" target="_blank">Documentation</a></li>
+              <li><a href="#" onclick="openUsageModal()">Usage</a></li>
+              <li><a href="#" onclick="openQuestionModal()">About</a></li>
+            </ul>
+          </div>
+        </div>
+      </nav>
+
+      <div id="usageModal" class="modal">
+        <div class="modal-content">
+          <span class="close" onclick="closeModal()">&times;</span>
+          <p>#TODO USAGE TO BE UPDATED</p>
+        </div>
+      </div>
+
+      <div id="questionModal" class="modal">
+        <div class="modal-content">
+          <span class="close" onclick="closeModal()">&times;</span>
+          <p>#TODO UPDATE ABOUT</p>
+        </div>
+      </div>
+      
+      <div id='header'>
+        <h1>VarPPUD</h1>
+        <p id='headerSubtitle'>A Refined Machine Learning Approach</p>
+      </div>
+
+      <div id='inputContainer'>
+        Start Using by
+        <!--*! ========================================================================================================================= -->
+        <!--* Temperarily disabled file input-->
+        <!-- <label for="file-upload" class="custom-file-upload">
+          <i class="fa fa-cloud-upload"></i> Uploading a File
+        </label>
+        <input id="file-upload" onchange="updateInputContent()" type="file"/>     -->
+        <!--*! ========================================================================================================================= -->
+        <form action="data_sub" method="POST" class="input_form">
+          <label for="user_input">Entering some values: </label>
+          <input
+            id="value1"
+            type="text"
+            name="name_field"/>
+            <input
+            id="value2"
+            type="text"
+            name="name_field"/>
+            <input
+            id="value3"
+            type="text"
+            name="name_field"/>
+            <input
+            id="value4"
+            type="text"
+            name="name_field"/>
+          <label for="submit-button">
+            <i class="fa fa-check" aria-hidden="true"></i>
+          </label>
+          <input class="actionButton" id='submit-button' type="submit" value="OK" />
+        </form>
+      </div>
+      <!-- <div class="actionContainer" id='inputActionContainer'> -->
+          <!-- <button class="actionButton" onclick="restart()"><i class="fa fa-refresh" aria-hidden="true"></i> </button> -->
+          <!-- <button class="actionButton" type="submit" onclick="submit()"> <i class="fa fa-check" aria-hidden="true"></i></button> -->
+          <!-- <button class="actionButton" onclick="post('/static/', {'a': 123})"><i class="fa fa-check" aria-hidden="true"></i></button> -->
+      <!-- </div> -->
+
+      
+    
+    </div>    
+  </body>
+  <!-- partial -->
+  <script src='https://cdnjs.cloudflare.com/ajax/libs/jquery/2.2.2/jquery.min.js'></script>
+  <script src='https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js'></script>
+  <script src='https://isotope.metafizzy.co/jquery.isotope.min.js'></script>
+  <script src='https://ajax.googleapis.com/ajax/libs/jqueryui/1.11.2/jquery-ui.min.js'></script>
+  <script src="{% static 'script.js' %}"></script>
+  <script src="{% static 'particles.min.js' %}"></script>
+  </body>
+</html>
+
+
+
